@@ -2,15 +2,14 @@ def create_people_by_age():
     return {}
 
 
-
 def add_to_dict(people_by_age, name, age):
-    people_by_age[len(people_by_age)] = {"name": name, "age": age}
+    people_by_age[name] = age
     return people_by_age
 
 
-
 def dict_contains(people_by_age, name):
-    pass
+    if name in people_by_age:
+        return True
 
 
 def age_of_people(people_by_age, name):
@@ -46,7 +45,8 @@ def main():
 
     if not dict_contains(people_by_age, "John Doe"):
         print("Error: dict does not contain John Doe")
-
+    else:
+        print("3) add_to_dict (and dict_contains)=> OK")
 
     if not dict_contains(people_by_age, "Robert Durand"):
         print("Error: dict does not contain Robert Durand")
