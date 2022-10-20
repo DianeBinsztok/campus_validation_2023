@@ -17,11 +17,17 @@ def age_of_people(people_by_age, name):
 
 
 def list_people(people_by_age):
-    pass
+    keys_list = []
+    for key in people_by_age.keys():
+        keys_list.append(key)
+    return keys_list
 
 
 def list_age(people_by_age):
-    pass
+    values_list = []
+    for value in people_by_age.values():
+        values_list.append(value)
+    return values_list
 
 
 def size_of_dict(people_by_age):
@@ -65,9 +71,13 @@ def main():
 
     if list_people(people_by_age) != ["John Doe", "Robert Durand"]:
         print("Error: list of people is not correct")
+    else:
+        print("5) list_people => OK")
 
     if list_age(people_by_age) != [25, 54]:
         print("Error: list of age is not correct")
+    else:
+        print("6) list_age => OK")
 
 
 if __name__ == "__main__":
