@@ -13,7 +13,7 @@ def dict_contains(people_by_age, name):
 
 
 def age_of_people(people_by_age, name):
-    pass
+    return people_by_age[name]
 
 
 def list_people(people_by_age):
@@ -50,12 +50,18 @@ def main():
 
     if not dict_contains(people_by_age, "Robert Durand"):
         print("Error: dict does not contain Robert Durand")
+    else:
+        print("3) add_to_dict (and dict_contains)=> OK")
 
     if age_of_people(people_by_age, "John Doe") != 25:
         print("Error: age of John Doe is not 25")
+    else:
+        print("4) check dict value for given key => OK")
 
     if age_of_people(people_by_age, "Robert Durand") != 54:
         print("Error: age of Robert Durand is not 54")
+    else:
+        print("4) check dict value for given key => OK")
 
     if list_people(people_by_age) != ["John Doe", "Robert Durand"]:
         print("Error: list of people is not correct")
