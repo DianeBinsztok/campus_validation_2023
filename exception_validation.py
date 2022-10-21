@@ -3,37 +3,47 @@ def start_exercice():
     catch_int_conversion_error()
     catch_your_own_exception()
 
-
 def catch_division_by_zero():
-    return 5 / 0
+    try:
+        5 / 0
+    except ZeroDivisionError as e:
+        print(f"Pour une division par zéro, le résultat est infini => {e}")
+
+
 
 def catch_int_conversion_error():
-    return int("a")
+    try:
+        int("a")
+    except ValueError as e:
+        print(f"Cette valeur ne peut pas être convertie en nombre => {e}")
+
+
+# équivalent de MyAwesomeException extends Exception
+class MyAwesomeException(Exception):
+    print(f"Opération impossible: {Exception.__name__}")
 
 
 
-
-class MyAwesomeException:
-    pass
-
-
-def raise_my_own_exception():
-    pass
+# def raise_my_own_exception():
+#     raise MyAwesomeException
 
 
 def catch_your_own_exception():
-    exception_catched = False
+    exception_caught = False
     try:
-        raise_my_own_exception()
+        #raise_my_own_exception()
+        raise MyAwesomeException
     except MyAwesomeException:
-        exception_catched = True
-    if not exception_catched:
-        print("Error: MyAwesomeException not catched")
+        exception_caught = True
+    if not exception_caught:
+        print("Error: MyAwesomeException not caught")
 
 
 def main():
     try:
         start_exercice()
+    except MyAwesomeException as a:
+        print(f"Et là, ça marche? => {a}")
     except Exception as e:
         print(f"Error: Cette exception ne doit pas être capturée ici : {e}")
 
