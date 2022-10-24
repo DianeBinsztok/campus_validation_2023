@@ -4,7 +4,7 @@ def create_task_list():
 
 def add_to_list(list_task, task):
     list_task.append(task)
-    return list_task
+    print(list_task)
 
 
 def size_of_list(list_task):
@@ -12,14 +12,16 @@ def size_of_list(list_task):
 
 
 def list_contains(list_task, task):
-    if task in list_task:
-        return True
+    return task in list_task
 
 
 def upper_task_in_tasklist(list_task):
-    # Je re-déclare un tableau et y mets les élément du premier en .upper()
-    list_tasks_upper = [task.upper() for task in list_task]
-    return  list_tasks_upper
+    new_list = []
+    for itm in list_task:
+        itm.upper()
+        new_list.append(itm)
+    return new_list
+
 
 def main():
     list_task = create_task_list()
@@ -34,7 +36,7 @@ def main():
     if size_of_list(list_task) != 2:
         print("Error: list size is not 2")
     else:
-        print("2) add_to_list => OK")
+        print("2) add_to_list + size_of_list => OK")
 
     if not list_contains(list_task, "task1"):
         print("Error: list does not contain task1")

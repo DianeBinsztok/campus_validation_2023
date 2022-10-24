@@ -8,8 +8,9 @@ def add_to_dict(people_by_age, name, age):
 
 
 def dict_contains(people_by_age, name):
-    if name in people_by_age:
-        return True
+    # if name in people_by_age:
+    #     return True
+    return name in people_by_age
 
 
 def age_of_people(people_by_age, name):
