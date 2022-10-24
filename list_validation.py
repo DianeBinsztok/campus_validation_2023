@@ -1,25 +1,21 @@
 def create_task_list():
-    return []
+    pass
 
 
 def add_to_list(list_task, task):
-    list_task.append(task)
-    return list_task
+    pass
 
 
 def size_of_list(list_task):
-    return len(list_task)
+    pass
 
 
 def list_contains(list_task, task):
-    if task in list_task:
-        return True
+    pass
 
 
 def upper_task_in_tasklist(list_task):
-    # Je re-déclare un tableau et y mets les élément du premier en .upper()
-    list_tasks_upper = [task.upper() for task in list_task]
-    return  list_tasks_upper
+    pass
 
 def main():
     list_task = create_task_list()

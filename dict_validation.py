@@ -1,37 +1,29 @@
 def create_people_by_age():
-    return {}
+    pass
 
 
 def add_to_dict(people_by_age, name, age):
-    people_by_age[name] = age
-    return people_by_age
+    pass
 
 
 def dict_contains(people_by_age, name):
-    if name in people_by_age:
-        return True
+    pass
 
 
 def age_of_people(people_by_age, name):
-    return people_by_age[name]
+    pass
 
 
 def list_people(people_by_age):
-    keys_list = []
-    for key in people_by_age.keys():
-        keys_list.append(key)
-    return keys_list
+    pass
 
 
 def list_age(people_by_age):
-    values_list = []
-    for value in people_by_age.values():
-        values_list.append(value)
-    return values_list
+    pass
 
 
 def size_of_dict(people_by_age):
-    return len(people_by_age)
+    pass
 
 
 def main():
