@@ -4,7 +4,6 @@ def create_task_list():
 
 def add_to_list(list_task, task):
     list_task.append(task)
-    print(list_task)
 
 
 def size_of_list(list_task):
@@ -18,8 +17,7 @@ def list_contains(list_task, task):
 def upper_task_in_tasklist(list_task):
     new_list = []
     for itm in list_task:
-        itm.upper()
-        new_list.append(itm)
+        new_list.append(itm.upper())
     return new_list
 
 
