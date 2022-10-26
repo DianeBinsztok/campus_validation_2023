@@ -1,25 +1,48 @@
+class TasksList(list):
+    def __init__(self):
+        self.list = []
+
+    def add(self, task):
+        self.list.append(task)
+
+    def length(self):
+        return len(self.list)
+
+    def contains(self, task):
+        print("TasksList.contains => ", self.list)
+        return task in self.list
+
+    def uppercase(self):
+        print("a")
+        new_list = TasksList()
+        print("b")
+        for item in self.list:
+            new_list.add(item.upper())
+            if len(self.list) > 10:
+                break
+        print("c")
+        print("TasksList.upper => ", new_list)
+        return new_list
+
+
 def create_task_list():
-    return []
+    return TasksList()
 
 
-def add_to_list(list_task, task):
-    list_task.append(task)
+def add_to_list(list_task: TasksList, task):
+    list_task.add(task)
 
 
-def size_of_list(list_task):
-    return len(list_task)
+def size_of_list(list_task: TasksList):
+    return list_task.length()
 
 
-def list_contains(list_task, task):
-    return task in list_task
+def list_contains(list_task: TasksList, task):
+    return list_task.contains(task)
 
 
-def upper_task_in_tasklist(list_task):
-    new_list = []
-    for itm in list_task:
-        new_list.append(itm.upper())
-    return new_list
-
+def upper_task_in_tasklist(list_task: TasksList):
+    return list_task.uppercase()
 
 
 def main():
@@ -63,6 +86,11 @@ def main():
         print("Error: list size is not 2")
     else:
         print("5) size_of_list(task_list_upper) => OK")
+
+
+def test(value, t=[]):
+    t.append(value)
+    return t
 
 
 if __name__ == "__main__":
