@@ -1,4 +1,5 @@
 from tasksList.TasksList import TasksList
+from tasksList import say
 
 def create_task_list():
     return TasksList()
@@ -21,6 +22,7 @@ def upper_task_in_tasklist(list_task: TasksList):
 
 
 def main():
+    say("Hello")
     list_task = create_task_list()
 
     if not isinstance(list_task, list):
