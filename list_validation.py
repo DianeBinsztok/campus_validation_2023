@@ -1,29 +1,4 @@
-class TasksList(list):
-    def __init__(self):
-        self.list = []
-
-    def add(self, task):
-        self.list.append(task)
-
-    def length(self):
-        return len(self.list)
-
-    def contains(self, task):
-        print("TasksList.contains => ", self.list)
-        return task in self.list
-
-    def uppercase(self):
-        print("a")
-        new_list = TasksList()
-        print("b")
-        for item in self.list:
-            new_list.add(item.upper())
-            if len(self.list) > 10:
-                break
-        print("c")
-        print("TasksList.upper => ", new_list)
-        return new_list
-
+from tasksList.TasksList import TasksList
 
 def create_task_list():
     return TasksList()
@@ -86,11 +61,6 @@ def main():
         print("Error: list size is not 2")
     else:
         print("5) size_of_list(task_list_upper) => OK")
-
-
-def test(value, t=[]):
-    t.append(value)
-    return t
 
 
 if __name__ == "__main__":
